@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06f3f19d-a232-448f-a90c-4e62be189c70" name="Changes" comment="Añadimos backup texto y leemos backups">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Articulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/ComparaArtPorExistencias.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/ComparaArtPorPrecio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Entrada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Excepciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/LineaPedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Utilidades.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2tDMeyyn3XqzQYbSUBYYFoU6h4H" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Tienda.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "<unknown>",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alu19d/OneDrive - Consejería de Educación/DAW/Eduardo/NetBeans/TiendaElectronicas/src/main/java/org/educastur/samuelepv59",
+    "settings.editor.selected.configurable": "settings.sync"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alu19d\OneDrive - Consejería de Educación\DAW\Eduardo\NetBeans\TiendaElectronicas\src\main\java\org\educastur\samuelepv59" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.educastur.samuelepv59" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tienda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.educastur.samuelepv59.Tienda" />
+      <module name="TiendaElectronicas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.educastur.samuelepv59.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Tienda" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06f3f19d-a232-448f-a90c-4e62be189c70" name="Changes" comment="" />
+      <created>1739882290303</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739882290303</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Añadimos backup texto y leemos backups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadimos backup texto y leemos backups" />
+  </component>
+</project>
