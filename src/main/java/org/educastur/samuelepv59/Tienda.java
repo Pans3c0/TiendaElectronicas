@@ -1,5 +1,7 @@
 package org.educastur.samuelepv59;
 
+import org.educastur.samuelepv59.builder.ClienteBuilder;
+
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
@@ -27,8 +29,8 @@ class Tienda {
     }
     public static void main(String[] args) {
         Tienda t = new Tienda();
-        //t.leerArchivos();
-        t.cargaDatos();
+        t.leerArchivos();
+        //t.cargaDatos();
         t.imprimePedidos();
         t.menu();
         t.backup();
@@ -578,7 +580,11 @@ public void backupSeccion(){
         try(Scanner scClientes=new Scanner(new File("clientesCon.csv"))){
             while (scClientes.hasNextLine()){
                 String [] atributos = scClientes.nextLine().split("[,]");
-                Cliente c=new Cliente(atributos[0],atributos[1],atributos[2],atributos[3]);
+                Cliente c = new ClienteBuilder(atributos[0])
+                        .setNombre(atributos[1])
+                        .setTelefono(atributos[2])
+                        .setEmail(atributos[3])
+                        .build();
                 clientesAux.add(c);
             }
             clientesAux.stream().forEach(System.out :: println);
@@ -593,7 +599,11 @@ public void backupSeccion(){
         try(Scanner scClientes=new Scanner(new File("clientesSin.csv"))){
             while (scClientes.hasNextLine()){
                 String [] atributos = scClientes.nextLine().split("[,]");
-                Cliente c=new Cliente(atributos[0],atributos[1],atributos[2],atributos[3]);
+                Cliente c = new ClienteBuilder(atributos[0])
+                        .setNombre(atributos[1])
+                        .setTelefono(atributos[2])
+                        .setEmail(atributos[3])
+                        .build();
                 clientesAux.add(c);
             }
             clientesAux.stream().forEach(System.out :: println);
@@ -606,7 +616,11 @@ public void backupSeccion(){
         try(Scanner scClientes=new Scanner(new File("clientesConMasDe1000.csv"))){
             while (scClientes.hasNextLine()){
                 String [] atributos = scClientes.nextLine().split("[,]");
-                Cliente c=new Cliente(atributos[0],atributos[1],atributos[2],atributos[3]);
+                Cliente c = new ClienteBuilder(atributos[0])
+                        .setNombre(atributos[1])
+                        .setTelefono(atributos[2])
+                        .setEmail(atributos[3])
+                        .build();
                 clientesAux.add(c);
             }
             clientesAux.stream().forEach(System.out :: println);
@@ -622,7 +636,11 @@ public void backupSeccion(){
         try(Scanner scClientes=new Scanner(new File("clientes.csv"))){
             while (scClientes.hasNextLine()){
                 String [] atributos = scClientes.nextLine().split("[,]");
-                Cliente c=new Cliente(atributos[0],atributos[1],atributos[2],atributos[3]);
+                Cliente c = new ClienteBuilder(atributos[0])
+                        .setNombre(atributos[1])
+                        .setTelefono(atributos[2])
+                        .setEmail(atributos[3])
+                        .build();
                 clientesAux.put(atributos[0], c);
             }
         }catch(IOException e){
@@ -739,7 +757,11 @@ public void backupSeccion(){
         if (email == null) return;
 
         try {
-            Cliente cliente = new Cliente(dni, nombre, telefono, email);
+            Cliente cliente = new ClienteBuilder(dni)
+                    .setNombre(nombre)
+                    .setTelefono(telefono)
+                    .setEmail(email)
+                    .build();
             crearUsuario(cliente);
             System.out.println("✅ Cliente Registrado Con Exito");
         } catch (Excepciones.Registrado e) {
@@ -766,6 +788,7 @@ public void backupSeccion(){
     }
     // endregion
 
+    /**
     public void cargaDatos(){
         categoriasArt.add("periféricos");
         categoriasArt.add("almacenamiento");
@@ -848,6 +871,7 @@ public void backupSeccion(){
 
 
     }
+     */
 
 
 }
