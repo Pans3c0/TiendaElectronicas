@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06f3f19d-a232-448f-a90c-4e62be189c70" name="Changes" comment="Añadimos backup texto y leemos backups">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Articulo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/ComparaArtPorExistencias.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/ComparaArtPorPrecio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Entrada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Excepciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/LineaPedido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Pedido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Utilidades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Tienda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Tienda.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +17,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Pans3c0&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Pans3c0/TiendaElectronicas&quot;,
+    &quot;accountId&quot;: &quot;40c785f8-92cc-4f70-8b3b-ad21b865acce&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -38,18 +38,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Tienda.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "<unknown>",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/alu19d/OneDrive - Consejería de Educación/DAW/Eduardo/NetBeans/TiendaElectronicas/src/main/java/org/educastur/samuelepv59",
-    "settings.editor.selected.configurable": "settings.sync"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Tienda.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alu19d/OneDrive - Consejería de Educación/DAW/Eduardo/NetBeans/TiendaElectronicas/src/main/java/org/educastur/samuelepv59&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alu19d\OneDrive - Consejería de Educación\DAW\Eduardo\NetBeans\TiendaElectronicas\src\main\java\org\educastur\samuelepv59" />
@@ -87,6 +87,23 @@
       <option name="presentableId" value="Default" />
       <updated>1739882290303</updated>
     </task>
+    <task id="LOCAL-00001" summary="Añadimos backup texto y leemos backups">
+      <option name="closed" value="true" />
+      <created>1740830964732</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740830964732</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Añadimos backup texto y leemos backups">
+      <option name="closed" value="true" />
+      <created>1740830989558</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740830989558</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

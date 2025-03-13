@@ -1,8 +1,11 @@
 package org.educastur.samuelepv59;
 
+import javax.swing.text.html.parser.Parser;
 import java.io.*;
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 class Tienda {
@@ -27,8 +30,9 @@ class Tienda {
     }
     public static void main(String[] args) {
         Tienda t = new Tienda();
-        //t.leerArchivos();
-        t.cargaDatos();
+        t.leerArchivos();
+        //t.cargaDatos();
+        t.cargaCategorias();
         t.imprimePedidos();
         t.menu();
         t.backup();
@@ -44,6 +48,78 @@ class Tienda {
         */
 
     }
+
+    //region marzoEjercicios
+    public int artEnPedido(String idArt, Pedido p){
+        return p.getCestaCompra().stream().filter(lP -> lP.getIdArticulo().equals(idArt))
+                .mapToInt(LineaPedido::getUnidades).sum();
+    }
+
+    private void artClientes(){
+        Articulo articuloEncontrado = Entrada.articulo(articulos);
+        if (articuloEncontrado == null) return;
+        pedidos.stream()
+                .sorted(
+                        Comparator.comparingInt(p->
+                                        artEnPedido(articuloEncontrado.getIdArticulo(),(Pedido) p))
+                                .reversed())
+                .forEach(p->
+                        System.out.println("Pedido" + p.toString()+" con " + artEnPedido(articuloEncontrado.getIdArticulo(),(Pedido) p)+" unidades.\n"));
+    }
+    public void mostrarUsuariosPorArticulo() {
+        String idArticulo = Entrada.articulo(articulos).getIdArticulo();
+        if (idArticulo == null) return;
+        // Filtrar los pedidos donde el artículo aparece en la cesta de compra
+        Map<Cliente, Integer> usuariosConUnidades = pedidos.stream()
+                .flatMap(pedido -> pedido.getCestaCompra().stream()
+                        .filter(lp -> lp.getIdArticulo().equals(idArticulo))
+                        .map(lp -> new AbstractMap.SimpleEntry<>(pedido.getClientePedido(), lp.getUnidades()))
+                )
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey, // Usuario
+                        Map.Entry::getValue, // Unidades compradas
+                        Integer::sum // Sumar si el usuario ya ha comprado más unidades
+                ));
+
+        // Mostrar los resultados
+        if (usuariosConUnidades.isEmpty()) {
+            System.out.println("Ningún usuario ha comprado este artículo.");
+        } else {
+            System.out.println("Usuarios que compraron el artículo " + idArticulo + ":");
+            usuariosConUnidades.forEach((usuario, unidades) ->
+                    System.out.println(usuario.getNombre() + " ha comprado " + unidades + " unidades."));
+        }
+    }
+
+    // El ejercicio 2 esta en la region de examenes
+
+    //Ejercicio 3
+    public void listaSecciones2(){
+        Scanner sc = new Scanner(System.in);
+        listadoSecciones("SECCIONES DE ARTICULOS",categoriasArt);
+        System.out.println("Introduce la opción: ");
+        String seccionString;
+        System.out.println();
+        do {
+            seccionString = sc.nextLine();
+        }while (!Utilidades.esInt(seccionString));
+        if (Integer.parseInt(seccionString)>6 | Integer.parseInt(seccionString)<1){
+            System.out.println("La categoria introducida no existe.");
+            return;
+        }
+        int seccion = Integer.parseInt(seccionString);
+        if (seccion == 6){
+            imprimeArticulo();
+            return;
+        }
+        System.out.println("Articulos de la categoria "+categoriasArt.get(seccion)+" son:");
+        articulos.values().stream()
+                .filter(a -> a.getSeccion() == seccion)
+                .forEach(a -> System.out.println('\n'+a.getIdArticulo()+" | "+a));
+
+    }
+
+//endregion
 
     // region examen
     public void menuExamen() {
@@ -78,6 +154,11 @@ class Tienda {
         }
     }
 
+
+
+
+
+
     private void total() {
         Scanner sc=new Scanner(System.in);
         System.out.println("Ingrese el ID del pedido.");
@@ -110,6 +191,7 @@ class Tienda {
                 .filter(a->a.getExistencias()<ud)
                 .forEach(System.out::println);
     }
+
     // endregion
 
 // region menu
@@ -125,6 +207,7 @@ class Tienda {
             System.out.println("\t\t\t\t3 - Gestion Prestamos/Devoluciones");
             System.out.println("\t\t\t\t4 - Prueba Examen");
             System.out.println("\t\t\t\t5 - Persistencias");
+            System.out.println("\t\t\t\t6 - Tester");
             System.out.println("\n\n\t\t\t\t9 - SALIR\n\n");
             opcion=sc.nextInt();
             switch (opcion){
@@ -149,6 +232,10 @@ class Tienda {
                 }
                 case 5:{
                     menuPersistencias();
+                    break;
+                }
+                case 6:{
+                    listaSecciones2();
                     break;
                 }
             }
@@ -766,13 +853,16 @@ public void backupSeccion(){
     }
     // endregion
 
-    public void cargaDatos(){
+    public void cargaCategorias(){
         categoriasArt.add("periféricos");
         categoriasArt.add("almacenamiento");
         categoriasArt.add("impresoras");
         categoriasArt.add("monitores");
         categoriasArt.add("componentes");
         categoriasArt.add("todos");
+    }
+    public void cargaDatos(){
+
 
 
         clientes.put("80580845T",new Cliente("80580845T","ANA","658111111","ana@gmail.com"));
