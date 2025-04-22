@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06f3f19d-a232-448f-a90c-4e62be189c70" name="Changes" comment="Añadimos backup texto y leemos backups">
+    <list default="true" id="06f3f19d-a232-448f-a90c-4e62be189c70" name="Changes" comment="Realizamos ejercicios para el lunes 17 de Marzo">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/educastur/samuelepv59/EntradaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Entrada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Tienda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/educastur/samuelepv59/Tienda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/educastur/samuelepv59/UtilidadesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/educastur/samuelepv59/UtilidadesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,26 +43,36 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2tDMeyyn3XqzQYbSUBYYFoU6h4H" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Tienda.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alu19d/OneDrive - Consejería de Educación/DAW/Eduardo/NetBeans/TiendaElectronicas/src/main/java/org/educastur/samuelepv59&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Tienda.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alu19d/OneDrive - Consejería de Educación/DAW/Eduardo/NetBeans/TiendaElectronicas/src/main/java/org/educastur/samuelepv59",
+    "settings.editor.selected.configurable": "settings.sync"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alu19d\OneDrive - Consejería de Educación\DAW\Eduardo\NetBeans\TiendaElectronicas\src\main\java\org\educastur\samuelepv59" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.educastur.samuelepv59" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.educastur.samuelepv59" />
@@ -103,11 +123,20 @@
       <option name="project" value="LOCAL" />
       <updated>1740830989558</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Realizamos ejercicios para el lunes 17 de Marzo">
+      <option name="closed" value="true" />
+      <created>1741850396985</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741850396985</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Añadimos backup texto y leemos backups" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadimos backup texto y leemos backups" />
+    <MESSAGE value="Realizamos ejercicios para el lunes 17 de Marzo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Realizamos ejercicios para el lunes 17 de Marzo" />
   </component>
 </project>

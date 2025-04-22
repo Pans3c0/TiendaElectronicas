@@ -41,11 +41,21 @@ public class UtilidadesTest {
      */
     @org.junit.jupiter.api.Test
     public void testEsInt() {
+        /**
         System.out.println("Test para el método es Int");
         assertTrue(Utilidades.esInt("-5"),"El -5 es int");
         assertTrue(Utilidades.esInt("5.5"),"El 5 es int");
         assertFalse(Utilidades.esInt("5.5"),"El 5.5 es int");
         assertFalse(Utilidades.esInt("xty"),"El xty no es int");
+         **/
+
+        // De esta manera se ejecutan uno a uno y te indica donde te ha fallado cada uno.
+        assertAll(
+                ()->assertTrue(Utilidades.esInt("-5"),"El -5 es int"),
+                ()->assertTrue(Utilidades.esInt("5.5"),"El 5 es int"),
+                ()->assertFalse(Utilidades.esInt("5.5"),"El 5.5 es int"),
+                ()->assertFalse(Utilidades.esInt("xty"),"El xty no es int")
+        );
     }
 
     /**

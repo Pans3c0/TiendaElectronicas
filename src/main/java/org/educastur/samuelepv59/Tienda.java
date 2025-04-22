@@ -34,12 +34,15 @@ class Tienda {
         //t.cargaDatos();
         t.cargaCategorias();
         t.imprimePedidos();
+        t.backupHistorialPedidos();
         t.menu();
         t.backup();
+        t.clientesTxtBackup();
+
 
         /**
         t.clientesTxtBackupMas1000();
-        t.clientesTxtBackup();
+
         t.clientesTxtBackupSin();
         t.clientesTxtBackupCon();
         t.clientesTxtLeerCon();
@@ -50,6 +53,13 @@ class Tienda {
     }
 
     //region marzoEjercicios
+    public double totalClientes2(){
+        Cliente c = Entrada.cliente(clientes);
+        return pedidos.stream()
+                .filter(p->p.getClientePedido().equals((Cliente)c))
+                .mapToDouble(p->p.getCestaCompra().stream()
+                        .mapToDouble(cesta->cesta.getUnidades()* articulos.get(cesta.getIdArticulo()).getPvp()).sum()).sum();
+    }
     public int artEnPedido(String idArt, Pedido p){
         return p.getCestaCompra().stream().filter(lP -> lP.getIdArticulo().equals(idArt))
                 .mapToInt(LineaPedido::getUnidades).sum();
@@ -541,6 +551,48 @@ public void backup() {
 
     }
 
+
+    public void backupHistorialPedidos(){
+        for (Cliente c : clientes.values()){
+                String nameFile = "PedidosCliente" + c.getNombre() + ".dat";
+                try (ObjectOutputStream oisClienteDetalle = new ObjectOutputStream(new FileOutputStream(nameFile))) {
+                    for (Pedido p : pedidos) {
+                        if (p.getClientePedido().equals(c)) {
+                            oisClienteDetalle.writeObject(p);
+                        }
+                    }
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+        }
+
+    }
+    public void leerPedidosClientes(){
+        Pedido p = null;
+        for (Cliente c : clientes.values()){
+            String nameFile = "PedidosCliente" + c.getNombre() + ".dat";
+            try (ObjectInputStream oisClienteDetalle = new ObjectInputStream(new FileInputStream(nameFile))) {
+                for (Pedido ped : pedidos) {
+                    if ((p = (Pedido)oisClienteDetalle.readObject()) != null) {
+
+                    }
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+    }
+
+    private boolean tienePedidos(Cliente c){
+        for (Pedido p : pedidos){
+            if (p.getClientePedido().equals(c)){
+                return true;
+            }
+        }
+        return false;
+    }
 public void backupSeccion(){
     try(ObjectOutputStream oisImpresora=new ObjectOutputStream(new FileOutputStream("impresoras.dat"));
         ObjectOutputStream oisMonitores=new ObjectOutputStream(new FileOutputStream("monitores.dat"));
@@ -604,6 +656,15 @@ public void backupSeccion(){
         try(BufferedWriter bfwClientes=new BufferedWriter(new FileWriter("clientes.csv"))){
             for (Cliente c : clientes.values()) {
                 bfwClientes.write(c.getDni() + "," + c.getNombre() + "," + c.getTelefono() + "," + c.getEmail() + "\n");
+            }
+        }catch (FileNotFoundException e) {
+            System.out.println(e.toString());
+        }catch(IOException e){
+            System.out.println(e.toString());
+        }
+        try(BufferedWriter bfwArticulos=new BufferedWriter(new FileWriter("articulos.csv"))){
+            for (Articulo a : articulos.values()) {
+                bfwArticulos.write( a.getIdArticulo()+ "," + a.getDescripcion() + "," + a.getPvp() + "," + a.getExistencias()+ "\n");
             }
         }catch (FileNotFoundException e) {
             System.out.println(e.toString());

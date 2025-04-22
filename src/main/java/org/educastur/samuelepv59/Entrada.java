@@ -32,7 +32,7 @@ public class Entrada {
         }
     }
 
-    private static String idArt() {
+    public static String idArt() {
         Scanner sc = new Scanner (System.in);
         System.out.println("Introduce el ID del Articulo:");
         String idArt = sc.nextLine();
